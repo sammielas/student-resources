@@ -1,0 +1,30 @@
+<div class = "row">
+  <div class="col-md-6">
+    <h2>
+      {{ student.firstName }} {{ student.lastName }}
+    </h2>
+  </div>
+  <div class="col-md-3">
+  </div>
+  <div class="col-md-2">
+    <a href="#/"><button style="margin-top:20px" class="btn btn-default" ng-click="deleteStudent(student._id)">Delete</button></a>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+<div ng-hide="editMode" class="container">
+  <div>
+    <p ng-if="student.email">email: <a ng-href="mailto:{{ student.email }}" target="_blank">{{ student.email }}</a></p>
+    <p ng-if="student.phone.mobile">phone (m): {{ student.phone.mobile }} </p>
+    <p ng-if="student.phone.work">phone (w): {{ student.phone.work }} </p>
+    <p ng-if="student.address"> address: {{ student.address }} </p>
+    <p ng-if="student.twitter"> twitter: <a ng-href="https://twitter.com/{{ student.twitter }}" target="_blank">@{{ student.twitter }}</a></p>
+    <p>
+      <button style="margin-top:20px" class="btn btn-default" ng-click="toggleEdit()">Edit</button>
+      <a style="margin-top:20px" class="btn btn-default" href="#/">Back</a>
+    </p>
+  </div>
+</div>
+<!-- Student form -->
+<div ng-include="studentFormUrl">
+</div>

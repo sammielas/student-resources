@@ -1,0 +1,41 @@
+<div class="row" ng-hide="student._id">
+  <div class="col-md-6">
+      <h2>Create new student</h2>
+  </div>
+</div>
+<div class="container">
+  <div>
+    <p>
+      <label>First Name (required)</label> 
+      <input id="name" class="form-control" type="text" ng-model="student.firstName" required> 
+    </p>
+    <p>
+      <label>Last Name (required)</label> 
+      <input id="name" class="form-control" type="text" ng-model="student.lastName" required> 
+    </p>
+    <p>
+      <label>Email (required)</label> 
+      <input id="name" class="form-control" type="text" ng-model="student.email" required> 
+    </p>
+    <p>
+      <label>Phone (Mobile)</label> 
+      <input id="name" class="form-control" type="text" ng-model="student.phone.mobile"> 
+    </p>
+    <p>
+      <label>Phone (Work)</label> 
+      <input id="name" class="form-control" type="text" ng-model="student.phone.work"> 
+    </p>
+    <p>
+      <label>Address</label> 
+      <input id="name" class="form-control" type="text" ng-model="student.address"> 
+    </p>
+    <p>
+      <label>Twitter Handle</label> 
+      <input id="name" class="form-control" type="text" ng-model="student.twitter"> 
+    </p>
+    <p>
+      <button style="margin-top:20px" class="btn btn-default" ng-click="savestudent(student)">Save</button>
+      <button style="margin-top:20px" class="btn btn-default" ng-click="back()">Back</button>
+    </p>
+  </div>
+</div>
